@@ -5,12 +5,17 @@ coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
+kotlinxSerializationJson = "1.6.3"
 lifecycleRuntimeKtx = "2.8.4"
 activityCompose = "1.9.1"
 composeBom = "2024.08.00"
 appcompat = "1.7.0"
 material = "1.12.0"
-navigation = "2.7.7"
+navigation = "2.8.0-rc01"
+hilt = "2.50"
+hilt-viewmodel = "1.0.0-alpha03"
+ksp = "1.9.25-1.0.20"
+ksp-compiler-hilt = "1.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -28,8 +33,13 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+ksp-compiler-hilt-android = {group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt"}
+hilt-viewmodel = {group = "androidx.hilt", name = "hilt-lifecycle-viewmodel", version.ref = "hilt-viewmodel"}
+ksp-compiler-hilt-viewmodel = {group = "androidx.hilt", name = "hilt-compiler", version.ref = "ksp-compiler-hilt"}
 
 [bundles]
 common-base = ["androidx-core-ktx", "androidx-lifecycle-runtime-ktx"]
@@ -39,4 +49,5 @@ common-compose = ["androidx-ui", "androidx-activity-compose", "androidx-ui-graph
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-
+jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}
