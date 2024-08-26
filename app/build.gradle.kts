@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.jetbrains.kotlin.serialization)
-    alias(libs.plugins.ksp)
 }
 
 android {
@@ -65,12 +64,6 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     // kotlin serialization
     implementation(libs.kotlinx.serialization.json)
-    // hilt
-    implementation(libs.hilt.android)
-    ksp(libs.ksp.compiler.hilt.android)
-    // hilt viewmodel
-    implementation(libs.hilt.viewmodel)
-    ksp(libs.ksp.compiler.hilt.viewmodel)
     // compose viewmodel
     implementation(libs.androidx.lifecycle.viewmodel.compose)
 
