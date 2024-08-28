@@ -66,8 +66,8 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     // compose viewmodel
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-
-
+    // import :libs:live_wallpaper
+    implementation(project(":libs:live_wallpaper"))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

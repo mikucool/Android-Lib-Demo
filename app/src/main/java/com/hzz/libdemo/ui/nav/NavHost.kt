@@ -23,7 +23,7 @@ fun AppNavGraph(
             HomeScreen(navController = navController)
         }
         composable<LiveWallpaper> {
-            LiveWallpaperScreen()
+            LiveWallpaperScreen(navController = navController)
         }
     }
 }

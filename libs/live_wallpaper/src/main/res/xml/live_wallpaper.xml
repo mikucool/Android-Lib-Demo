@@ -1,0 +1,4 @@
+<wallpaper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/live_wallpaper_description"
+    android:settingsActivity=".MyWallpaperSettingsActivity"
+    android:thumbnail="@drawable/live_wallpaper_icon_cards" />
