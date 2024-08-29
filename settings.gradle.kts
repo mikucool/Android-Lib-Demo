@@ -36,3 +36,4 @@ dependencyResolutionManagement {
 rootProject.name = "LibDemo"
 include(":app")
 include(":libs:live_wallpaper")
+include(":libs:local_server")
