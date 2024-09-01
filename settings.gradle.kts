@@ -37,3 +37,4 @@ rootProject.name = "LibDemo"
 include(":app")
 include(":libs:live_wallpaper")
 include(":libs:net_server")
+include(":libs:camera_demos")
