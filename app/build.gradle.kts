@@ -68,6 +68,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     // import :libs:live_wallpaper
     implementation(project(":libs:live_wallpaper"))
+    implementation(project(":libs:net_server"))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

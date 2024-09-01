@@ -38,7 +38,6 @@ class DefaultLiveWallpaperController(private val context: Context){
     }
 
     fun onVisibilityChanged(visible: Boolean) {
-        Log.e("TEMP_LOG", "onVisibilityChanged$visible")
         if (visible) {
             mainHandler.post(drawRunnable)
         }

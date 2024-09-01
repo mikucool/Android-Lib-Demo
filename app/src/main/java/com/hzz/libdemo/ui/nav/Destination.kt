@@ -6,3 +6,5 @@ import kotlinx.serialization.Serializable
 data class Home(val route: String)
 @Serializable
 data class LiveWallpaper(val route: String)
+@Serializable
+data class NetServer(val route: String)

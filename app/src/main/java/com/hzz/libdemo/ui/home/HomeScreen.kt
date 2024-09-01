@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.hzz.libdemo.ui.nav.LiveWallpaper
+import com.hzz.libdemo.ui.nav.NetServer
 
 @Composable
 fun HomeScreen(
@@ -28,6 +29,12 @@ fun HomeScreen(
             navController.navigate(LiveWallpaper("wallpaper_a"))
         }) {
             Text(text = "Live Wallpaper")
+        }
+
+        Button(onClick = {
+            navController.navigate(NetServer("net_server"))
+        }) {
+            Text(text = "Net Server")
         }
     }
 }

@@ -8,6 +8,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.hzz.libdemo.ui.home.HomeScreen
 import com.hzz.libdemo.ui.live_wallpaper.LiveWallpaperScreen
+import com.hzz.libdemo.ui.net_server.NetServerScreen
 
 @Composable
 fun AppNavGraph(
@@ -24,6 +25,9 @@ fun AppNavGraph(
         }
         composable<LiveWallpaper> {
             LiveWallpaperScreen(navController = navController)
+        }
+        composable<NetServer> {
+            NetServerScreen(navController = navController)
         }
     }
 }

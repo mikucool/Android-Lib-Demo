@@ -12,7 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/libs" />
             <option value="$PROJECT_DIR$/libs/live_wallpaper" />
-            <option value="$PROJECT_DIR$/libs/local_server" />
+            <option value="$PROJECT_DIR$/libs/net_server" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
