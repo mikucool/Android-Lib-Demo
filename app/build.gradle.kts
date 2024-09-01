@@ -69,6 +69,7 @@ dependencies {
     // import :libs:live_wallpaper
     implementation(project(":libs:live_wallpaper"))
     implementation(project(":libs:net_server"))
+    implementation(project(":libs:camera_demos"))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -8,3 +8,5 @@ data class Home(val route: String)
 data class LiveWallpaper(val route: String)
 @Serializable
 data class NetServer(val route: String)
+@Serializable
+data class CameraDemo1(val route: String)

@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.hzz.libdemo.ui.camera_demos.Demo1Screen
 import com.hzz.libdemo.ui.home.HomeScreen
 import com.hzz.libdemo.ui.live_wallpaper.LiveWallpaperScreen
 import com.hzz.libdemo.ui.net_server.NetServerScreen
@@ -28,6 +29,9 @@ fun AppNavGraph(
         }
         composable<NetServer> {
             NetServerScreen(navController = navController)
+        }
+        composable<CameraDemo1> {
+            Demo1Screen()
         }
     }
 }

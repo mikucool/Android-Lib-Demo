@@ -11,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.hzz.libdemo.ui.nav.CameraDemo1
 import com.hzz.libdemo.ui.nav.LiveWallpaper
 import com.hzz.libdemo.ui.nav.NetServer
 
@@ -35,6 +36,12 @@ fun HomeScreen(
             navController.navigate(NetServer("net_server"))
         }) {
             Text(text = "Net Server")
+        }
+
+        Button(onClick = {
+            navController.navigate(CameraDemo1("camera_demo1"))
+        }) {
+            Text(text = "Camera Demo1")
         }
     }
 }
