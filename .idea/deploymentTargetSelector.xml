@@ -8,6 +8,9 @@
       <SelectionState runConfigName="libs.materialdmoe">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="libs.legacyandroidviews">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>
