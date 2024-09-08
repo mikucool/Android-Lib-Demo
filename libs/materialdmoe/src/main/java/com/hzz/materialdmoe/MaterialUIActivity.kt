@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.hzz.materialdmoe.ui.MaterialHomeScreen
+import com.hzz.materialdmoe.ui.nav.MaterialNavGraph
 import com.hzz.materialdmoe.ui.theme.LibDemoTheme
 
 class MaterialUIActivity : ComponentActivity() {
@@ -13,7 +13,7 @@ class MaterialUIActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             LibDemoTheme {
-                MaterialHomeScreen()
+                MaterialNavGraph()
             }
         }
     }
