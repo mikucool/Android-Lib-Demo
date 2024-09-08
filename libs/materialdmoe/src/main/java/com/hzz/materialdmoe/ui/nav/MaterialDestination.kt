@@ -86,3 +86,22 @@ sealed class MaterialComponent {
     @Serializable
     data class MaterialTooltips(override val description: String = "Tooltips") : MaterialComponent()
 }
+
+@Serializable
+sealed class TopAppBar {
+    abstract val description: String
+
+    @Serializable
+    data class Small(override val description: String = "Small Top App Bar") : TopAppBar()
+
+    @Serializable
+    data class CenterAligned(override val description: String = "Center Aligned Top App Bar") :
+        TopAppBar()
+
+    @Serializable
+    data class Medium(override val description: String = "Medium Top App Bar") : TopAppBar()
+
+    @Serializable
+    data class Large(override val description: String = "Large Top App Bar") : TopAppBar()
+}
+

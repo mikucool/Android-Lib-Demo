@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.hzz.libdemo.ui.nav.CameraDemo1
 import com.hzz.libdemo.ui.nav.LiveWallpaper
+import com.hzz.libdemo.ui.nav.MaterialDemo
 import com.hzz.libdemo.ui.nav.NetServer
 
 @Composable
@@ -42,6 +43,11 @@ fun HomeScreen(
             navController.navigate(CameraDemo1("camera_demo1"))
         }) {
             Text(text = "Camera Demo1")
+        }
+        Button(onClick = {
+            navController.navigate(MaterialDemo("material_demo"))
+        }) {
+            Text(text = "Material Demo")
         }
     }
 }

@@ -70,6 +70,7 @@ dependencies {
     implementation(project(":libs:live_wallpaper"))
     implementation(project(":libs:net_server"))
     implementation(project(":libs:camera_demos"))
+    implementation(project(":libs:materialdmoe"))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

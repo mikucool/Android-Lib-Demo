@@ -1,5 +1,6 @@
 package com.hzz.materialdmoe.ui.home
 
+import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,9 +21,12 @@ import com.hzz.materialdmoe.data.MaterialDemoLocalRepository
 import com.hzz.materialdmoe.ui.nav.MaterialComponent
 
 @Composable
-fun MaterialHomeScreen(modifier: Modifier = Modifier, navController: NavController) {
+fun MaterialHomeScreen(
+    modifier: Modifier = Modifier,
+    navController: NavController,
+    context: Context = LocalContext.current
+) {
     val components: List<MaterialComponent> = MaterialDemoLocalRepository.getMaterialComponents()
-    val context = LocalContext.current
     LazyColumn(
         modifier = modifier
             .fillMaxSize()

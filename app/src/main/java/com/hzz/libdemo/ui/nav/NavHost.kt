@@ -9,6 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import com.hzz.libdemo.ui.camera_demos.Demo1Screen
 import com.hzz.libdemo.ui.home.HomeScreen
 import com.hzz.libdemo.ui.live_wallpaper.LiveWallpaperScreen
+import com.hzz.libdemo.ui.material_demos.MaterialDemoScreen
 import com.hzz.libdemo.ui.net_server.NetServerScreen
 
 @Composable
@@ -32,6 +33,9 @@ fun AppNavGraph(
         }
         composable<CameraDemo1> {
             Demo1Screen()
+        }
+        composable<MaterialDemo> {
+            MaterialDemoScreen()
         }
     }
 }
