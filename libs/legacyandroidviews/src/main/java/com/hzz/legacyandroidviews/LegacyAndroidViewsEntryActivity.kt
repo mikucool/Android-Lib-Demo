@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.hzz.legacyandroidviews.playground.ClipBoardDemoActivity
 import com.hzz.legacyandroidviews.playground.ScaleLayoutPlaygroundActivity
 
 class LegacyAndroidViewsEntryActivity : AppCompatActivity() {
@@ -22,6 +23,9 @@ class LegacyAndroidViewsEntryActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.button1).setOnClickListener {
             startActivity(Intent(this, ScaleLayoutPlaygroundActivity::class.java))
+        }
+        findViewById<Button>(R.id.button2).setOnClickListener {
+            startActivity(Intent(this, ClipBoardDemoActivity::class.java))
         }
     }
 }
