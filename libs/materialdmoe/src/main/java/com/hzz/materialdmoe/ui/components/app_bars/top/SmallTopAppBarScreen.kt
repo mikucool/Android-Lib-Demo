@@ -267,7 +267,7 @@ fun SmallTopAppBarScreen(
                         .padding(horizontal = 12.dp, vertical = 8.dp)
 
                 ) {
-                    Text(text = "Window Inset Left", modifier = Modifier.width(148.dp))
+                    Text(text = "Window Inset Left", modifier = Modifier.width(200.dp))
                     Slider(
                         value = uiState.windowInsetsRect.left,
                         onValueChange = { vm.updateWindowInsets(uiState.windowInsetsRect.copy(left = it)) },
@@ -282,7 +282,7 @@ fun SmallTopAppBarScreen(
                         .padding(horizontal = 12.dp, vertical = 8.dp)
 
                 ) {
-                    Text(text = "Window Inset Top", modifier = Modifier.width(148.dp))
+                    Text(text = "Window Inset Top", modifier = Modifier.width(200.dp))
                     Slider(
                         value = uiState.windowInsetsRect.top,
                         onValueChange = { vm.updateWindowInsets(uiState.windowInsetsRect.copy(top = it)) },
@@ -297,7 +297,7 @@ fun SmallTopAppBarScreen(
                         .padding(horizontal = 12.dp, vertical = 8.dp)
 
                 ) {
-                    Text(text = "Window Inset Right", modifier = Modifier.width(148.dp))
+                    Text(text = "Window Inset Right", modifier = Modifier.width(200.dp))
                     Slider(
                         value = uiState.windowInsetsRect.right,
                         onValueChange = { vm.updateWindowInsets(uiState.windowInsetsRect.copy(right = it)) },
@@ -312,7 +312,7 @@ fun SmallTopAppBarScreen(
                         .padding(horizontal = 12.dp, vertical = 8.dp)
 
                 ) {
-                    Text(text = "Window Inset Bottom", modifier = Modifier.width(148.dp))
+                    Text(text = "Window Inset Bottom", modifier = Modifier.width(200.dp))
                     Slider(
                         value = uiState.windowInsetsRect.bottom,
                         onValueChange = { vm.updateWindowInsets(uiState.windowInsetsRect.copy(bottom = it)) },
