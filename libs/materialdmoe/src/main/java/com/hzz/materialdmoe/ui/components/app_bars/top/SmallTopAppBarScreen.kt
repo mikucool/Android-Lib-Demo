@@ -197,7 +197,7 @@ fun SmallTopAppBarScreen(
                 ) {
                     RadioButton(
                         selected = uiState.appBarScrollBehavior == TopAppScrollBehavior.None,
-                        onClick = {}
+                        onClick = null
                     )
                     Text("No Behavior")
                 }
@@ -216,7 +216,7 @@ fun SmallTopAppBarScreen(
                 ) {
                     RadioButton(
                         selected = uiState.appBarScrollBehavior == TopAppScrollBehavior.EnterAlwaysCollapsed,
-                        onClick = {}
+                        onClick = null
                     )
                     Text("Enter Always Collapsed")
                 }
@@ -235,7 +235,7 @@ fun SmallTopAppBarScreen(
                 ) {
                     RadioButton(
                         selected = uiState.appBarScrollBehavior == TopAppScrollBehavior.ExitUntilCollapsed,
-                        onClick = {}
+                        onClick = null
                     )
                     Text("Exit Until Collapsed")
                 }
@@ -254,7 +254,7 @@ fun SmallTopAppBarScreen(
                 ) {
                     RadioButton(
                         selected = uiState.appBarScrollBehavior == TopAppScrollBehavior.Pinned,
-                        onClick = {}
+                        onClick = null
                     )
                     Text("Pinned")
                 }
