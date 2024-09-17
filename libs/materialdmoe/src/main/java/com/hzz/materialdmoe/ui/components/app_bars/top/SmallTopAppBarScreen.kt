@@ -67,6 +67,7 @@ fun SmallTopAppBarScreen(
     val configuration = LocalConfiguration.current
     val screenWidth = with(LocalDensity.current) { configuration.screenWidthDp.dp.toPx() }
     val screenHeight = with(LocalDensity.current) { configuration.screenHeightDp.dp.toPx() }
+    val defaultWindowInsets = TopAppBarDefaults.windowInsets
 
     Scaffold(
         modifier = modifier,
@@ -100,7 +101,7 @@ fun SmallTopAppBarScreen(
                     titleContentColor = MaterialTheme.colorScheme.primary,
                 ),
                 scrollBehavior = scrollBehavior,
-                windowInsets = object : WindowInsets {
+                windowInsets = if (uiState.isUseCustomWindowInsets) object : WindowInsets {
                     override fun getBottom(density: Density): Int {
                         return uiState.windowInsetsRect.bottom.toInt()
                     }
@@ -118,7 +119,7 @@ fun SmallTopAppBarScreen(
                         return uiState.windowInsetsRect.top.toInt()
                     }
 
-                }
+                } else defaultWindowInsets
             )
         }
     ) { paddingValue ->
@@ -263,61 +264,106 @@ fun SmallTopAppBarScreen(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .height(56.dp)
+                        .toggleable(
+                            value = uiState.isUseCustomWindowInsets,
+                            onValueChange = { vm.switchUsingCustomWindowInsetsState(!uiState.isUseCustomWindowInsets) }
+                        )
                         .fillMaxWidth()
                         .padding(horizontal = 12.dp, vertical = 8.dp)
 
                 ) {
-                    Text(text = "Window Inset Left", modifier = Modifier.width(200.dp))
-                    Slider(
-                        value = uiState.windowInsetsRect.left,
-                        onValueChange = { vm.updateWindowInsets(uiState.windowInsetsRect.copy(left = it)) },
-                        valueRange = 0f..screenWidth,
+                    Checkbox(
+                        checked = uiState.isShowBarEndActions,
+                        onCheckedChange = null
                     )
+                    Text("Using Custom Window Insets")
                 }
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier
-                        .height(56.dp)
-                        .fillMaxWidth()
-                        .padding(horizontal = 12.dp, vertical = 8.dp)
 
-                ) {
-                    Text(text = "Window Inset Top", modifier = Modifier.width(200.dp))
-                    Slider(
-                        value = uiState.windowInsetsRect.top,
-                        onValueChange = { vm.updateWindowInsets(uiState.windowInsetsRect.copy(top = it)) },
-                        valueRange = 0f..screenHeight,
-                    )
-                }
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier
-                        .height(56.dp)
-                        .fillMaxWidth()
-                        .padding(horizontal = 12.dp, vertical = 8.dp)
+                if (uiState.isUseCustomWindowInsets) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .height(56.dp)
+                            .fillMaxWidth()
+                            .padding(horizontal = 12.dp, vertical = 8.dp)
 
-                ) {
-                    Text(text = "Window Inset Right", modifier = Modifier.width(200.dp))
-                    Slider(
-                        value = uiState.windowInsetsRect.right,
-                        onValueChange = { vm.updateWindowInsets(uiState.windowInsetsRect.copy(right = it)) },
-                        valueRange = 0f..screenWidth,
-                    )
-                }
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier
-                        .height(56.dp)
-                        .fillMaxWidth()
-                        .padding(horizontal = 12.dp, vertical = 8.dp)
+                    ) {
+                        Text(text = "Window Inset Left", modifier = Modifier.width(200.dp))
+                        Slider(
+                            value = uiState.windowInsetsRect.left,
+                            onValueChange = {
+                                vm.updateWindowInsets(
+                                    uiState.windowInsetsRect.copy(
+                                        left = it
+                                    )
+                                )
+                            },
+                            valueRange = 0f..screenWidth,
+                        )
+                    }
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .height(56.dp)
+                            .fillMaxWidth()
+                            .padding(horizontal = 12.dp, vertical = 8.dp)
 
-                ) {
-                    Text(text = "Window Inset Bottom", modifier = Modifier.width(200.dp))
-                    Slider(
-                        value = uiState.windowInsetsRect.bottom,
-                        onValueChange = { vm.updateWindowInsets(uiState.windowInsetsRect.copy(bottom = it)) },
-                        valueRange = 0f..screenWidth,
-                    )
+                    ) {
+                        Text(text = "Window Inset Top", modifier = Modifier.width(200.dp))
+                        Slider(
+                            value = uiState.windowInsetsRect.top,
+                            onValueChange = {
+                                vm.updateWindowInsets(
+                                    uiState.windowInsetsRect.copy(
+                                        top = it
+                                    )
+                                )
+                            },
+                            valueRange = 0f..screenHeight,
+                        )
+                    }
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .height(56.dp)
+                            .fillMaxWidth()
+                            .padding(horizontal = 12.dp, vertical = 8.dp)
+
+                    ) {
+                        Text(text = "Window Inset Right", modifier = Modifier.width(200.dp))
+                        Slider(
+                            value = uiState.windowInsetsRect.right,
+                            onValueChange = {
+                                vm.updateWindowInsets(
+                                    uiState.windowInsetsRect.copy(
+                                        right = it
+                                    )
+                                )
+                            },
+                            valueRange = 0f..screenWidth,
+                        )
+                    }
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .height(56.dp)
+                            .fillMaxWidth()
+                            .padding(horizontal = 12.dp, vertical = 8.dp)
+
+                    ) {
+                        Text(text = "Window Inset Bottom", modifier = Modifier.width(200.dp))
+                        Slider(
+                            value = uiState.windowInsetsRect.bottom,
+                            onValueChange = {
+                                vm.updateWindowInsets(
+                                    uiState.windowInsetsRect.copy(
+                                        bottom = it
+                                    )
+                                )
+                            },
+                            valueRange = 0f..screenWidth,
+                        )
+                    }
                 }
 
             }

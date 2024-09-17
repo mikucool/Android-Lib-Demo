@@ -23,6 +23,9 @@ class SmallTopBarViewModel : ViewModel() {
     fun switchShowingAppBarEndActionState(isShow: Boolean) {
         _uiState.value = _uiState.value.copy(isShowBarEndActions = isShow)
     }
+    fun switchUsingCustomWindowInsetsState(useCustomWindowInsets: Boolean) {
+        _uiState.value = _uiState.value.copy(isUseCustomWindowInsets = useCustomWindowInsets)
+    }
 
     fun updateScrollBehavior(behavior: TopAppScrollBehavior) {
         _uiState.value = _uiState.value.copy(appBarScrollBehavior = behavior)
@@ -41,6 +44,7 @@ class SmallTopBarViewModel : ViewModel() {
         val isShowNavigationIcon: Boolean = false,
         val isShowBarEndActions: Boolean = false,
         val appBarScrollBehavior: TopAppScrollBehavior = TopAppScrollBehavior.None,
-        val windowInsetsRect: Rect = Rect(0f, 0f, 0f, 0f)
+        val windowInsetsRect: Rect = Rect(0f, 0f, 0f, 0f),
+        val isUseCustomWindowInsets: Boolean = false,
     )
 }
