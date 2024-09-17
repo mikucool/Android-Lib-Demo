@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-class SmallTopBarViewModel : ViewModel() {
+class TopBarViewModel : ViewModel() {
     private val _uiState = MutableStateFlow(TopAppBarUiState())
     val uiState: StateFlow<TopAppBarUiState> = _uiState.asStateFlow()
 

@@ -23,12 +23,12 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MediumTopAppBar
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -51,7 +51,7 @@ import com.hzz.materialdmoe.ui.components.app_bars.TopAppScrollBehavior
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SmallTopAppBarScreen(
+fun MediumTopAppBarScreen(
     modifier: Modifier = Modifier,
     navController: NavController,
     context: Context = LocalContext.current
@@ -72,7 +72,7 @@ fun SmallTopAppBarScreen(
     Scaffold(
         modifier = if (scrollBehavior != null) modifier.nestedScroll(scrollBehavior.nestedScrollConnection) else modifier,
         topBar = {
-            TopAppBar(
+            MediumTopAppBar(
                 title = { Text(text = uiState.appBarTitle, overflow = TextOverflow.Ellipsis) },
                 navigationIcon = {
                     if (uiState.isShowNavigationIcon) {
@@ -393,8 +393,6 @@ fun SmallTopAppBarScreen(
 
 @Composable
 @Preview
-fun SmallTopAppBarScreenPreview() {
-    SmallTopAppBarScreen(navController = NavController(LocalContext.current))
+fun MediumTopAppBarScreenTopAppBarScreenPreview() {
+    MediumTopAppBarScreen(navController = NavController(LocalContext.current))
 }
-
-
