@@ -273,7 +273,7 @@ fun CenterAlignedTopAppBarScreen(
 
                 ) {
                     Checkbox(
-                        checked = uiState.isShowBarEndActions,
+                        checked = uiState.isUseCustomWindowInsets,
                         onCheckedChange = null
                     )
                     Text("Using Custom Window Insets")
