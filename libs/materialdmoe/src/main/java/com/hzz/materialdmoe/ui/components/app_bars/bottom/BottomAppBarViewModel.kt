@@ -18,8 +18,15 @@ class BottomAppBarViewModel : ViewModel() {
         _uiState.value = _uiState.value.copy(windowInsetsRect = rect)
     }
 
+    fun switchUsingScrollBehaviorAndConnectState(useScrollBehaviorAndConnect: Boolean) {
+        _uiState.value =
+            _uiState.value.copy(useScrollBehaviorAndConnect = useScrollBehaviorAndConnect)
+    }
+
+
     data class BottomAppBarUiState(
         val windowInsetsRect: Rect = Rect(0f, 0f, 0f, 0f),
         val isUseCustomWindowInsets: Boolean = false,
+        val useScrollBehaviorAndConnect: Boolean = false
     )
 }
