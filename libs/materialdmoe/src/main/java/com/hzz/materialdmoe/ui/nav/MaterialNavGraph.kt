@@ -8,6 +8,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.hzz.materialdmoe.ui.components.app_bars.AppBarsScreen
+import com.hzz.materialdmoe.ui.components.app_bars.bottom.BottomAppBarScreen
 import com.hzz.materialdmoe.ui.components.app_bars.top.CenterAlignedTopAppBarScreen
 import com.hzz.materialdmoe.ui.components.app_bars.top.LargeTopAppBarScreen
 import com.hzz.materialdmoe.ui.components.app_bars.top.MediumTopAppBarScreen
@@ -42,6 +43,9 @@ fun MaterialNavGraph(
         }
         composable<TopAppBar.Large> {
             LargeTopAppBarScreen(navController = navController)
+        }
+        composable<BottomAppBar> {
+            BottomAppBarScreen()
         }
         /**App Bars End*/
 

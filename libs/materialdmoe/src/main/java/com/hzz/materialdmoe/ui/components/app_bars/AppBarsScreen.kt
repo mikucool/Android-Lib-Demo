@@ -2,6 +2,7 @@ package com.hzz.materialdmoe.ui.components.app_bars
 
 import android.content.Context
 import android.widget.Toast
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -26,15 +27,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.hzz.materialdmoe.data.MaterialDemoLocalRepository
+import com.hzz.materialdmoe.ui.nav.BottomAppBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppBarsScreen(
     modifier: Modifier = Modifier,
-    navController: NavController,
+    navController: NavController = NavController(LocalContext.current),
     context: Context = LocalContext.current
 ) {
     Scaffold(
@@ -68,6 +72,7 @@ fun AppBarsScreen(
             Text(
                 text = "Top App Bars",
                 modifier = Modifier.align(Alignment.Start),
+                fontWeight = FontWeight.Bold,
                 style = MaterialTheme.typography.bodyLarge
             )
             Card(modifier = Modifier.padding(vertical = 12.dp)) {
@@ -107,6 +112,41 @@ fun AppBarsScreen(
                     )
                 }
             }
+            Text(
+                text = "Bottom App Bars",
+                modifier = Modifier
+                    .align(Alignment.Start)
+                    .padding(top = 16.dp),
+                fontWeight = FontWeight.Bold,
+                style = MaterialTheme.typography.bodyLarge
+            )
+
+            Card(modifier = Modifier.padding(vertical = 12.dp)) {
+                Text(
+                    text = "Appearance:\n" +
+                            "Across the bottom of the screen.\n" +
+                            "Purpose:\n" +
+                            "Typically includes core navigation items. May also provide access to other key actions, such as through a contained floating action button.",
+                    modifier = Modifier.padding(16.dp),
+                    style = MaterialTheme.typography.bodyMedium
+                )
+            }
+            val bottomAppBar = BottomAppBar()
+            AppInfoCard(
+                modifier = Modifier
+                    .height(128.dp)
+                    .width(256.dp)
+                    .padding(end = 12.dp),
+                appBarInfo = bottomAppBar.description,
+                onClick = {
+                    try {
+                        navController.navigate(bottomAppBar)
+                    } catch (e: Exception) {
+                        Toast.makeText(context, "Not implemented yet", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                }
+            )
         }
     }
 }
@@ -114,10 +154,22 @@ fun AppBarsScreen(
 @Composable
 fun AppInfoCard(modifier: Modifier = Modifier, appBarInfo: String = "", onClick: () -> Unit = {}) {
     ElevatedCard(modifier = modifier, onClick = onClick) {
-        Text(
-            text = appBarInfo,
-            modifier = Modifier.padding(16.dp),
-            style = MaterialTheme.typography.bodyMedium
-        )
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = appBarInfo,
+                modifier = Modifier.padding(16.dp),
+                style = MaterialTheme.typography.headlineSmall
+            )
+        }
     }
+}
+
+@Composable
+@Preview(showBackground = true)
+fun AppBarsScreenPreview() {
+    AppBarsScreen()
 }

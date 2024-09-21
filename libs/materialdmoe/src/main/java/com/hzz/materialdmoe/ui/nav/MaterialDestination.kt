@@ -105,3 +105,6 @@ sealed class TopAppBar {
     data class Large(override val description: String = "Large Top App Bar") : TopAppBar()
 }
 
+@Serializable
+data class BottomAppBar(val description: String = "Bottom App Bar")
+
