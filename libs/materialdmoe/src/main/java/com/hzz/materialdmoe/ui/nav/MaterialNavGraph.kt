@@ -13,6 +13,7 @@ import com.hzz.materialdmoe.ui.components.app_bars.top.CenterAlignedTopAppBarScr
 import com.hzz.materialdmoe.ui.components.app_bars.top.LargeTopAppBarScreen
 import com.hzz.materialdmoe.ui.components.app_bars.top.MediumTopAppBarScreen
 import com.hzz.materialdmoe.ui.components.app_bars.top.SmallTopAppBarScreen
+import com.hzz.materialdmoe.ui.components.badge.BadgeScreen
 import com.hzz.materialdmoe.ui.home.MaterialHomeScreen
 
 @Composable
@@ -48,6 +49,12 @@ fun MaterialNavGraph(
             BottomAppBarScreen()
         }
         /**App Bars End*/
+
+        /**Badge Start*/
+        composable<MaterialComponent.MaterialBadges> {
+            BadgeScreen()
+        }
+        /**Badge End*/
 
     }
 }
