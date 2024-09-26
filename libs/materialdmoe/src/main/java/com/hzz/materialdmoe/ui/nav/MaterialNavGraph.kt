@@ -14,6 +14,8 @@ import com.hzz.materialdmoe.ui.components.app_bars.top.LargeTopAppBarScreen
 import com.hzz.materialdmoe.ui.components.app_bars.top.MediumTopAppBarScreen
 import com.hzz.materialdmoe.ui.components.app_bars.top.SmallTopAppBarScreen
 import com.hzz.materialdmoe.ui.components.badge.BadgeScreen
+import com.hzz.materialdmoe.ui.components.buttons.ButtonsScreen
+import com.hzz.materialdmoe.ui.components.buttons.common.CommonButtonsPlaygroundScreen
 import com.hzz.materialdmoe.ui.home.MaterialHomeScreen
 
 @Composable
@@ -55,6 +57,16 @@ fun MaterialNavGraph(
             BadgeScreen()
         }
         /**Badge End*/
+
+        /**Buttons Start*/
+        composable<MaterialComponent.MaterialButtons> {
+            ButtonsScreen(navController = navController)
+        }
+        composable<CommonButtonSPlayground> {
+            CommonButtonsPlaygroundScreen(navController = navController)
+        }
+
+        /**Buttons End*/
 
     }
 }
