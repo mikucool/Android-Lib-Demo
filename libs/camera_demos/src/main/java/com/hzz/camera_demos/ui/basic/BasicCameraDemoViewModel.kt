@@ -23,20 +23,23 @@ class BasicCameraDemoViewModel: ViewModel() {
             object : OnImageCapturedCallback() {
                 override fun onCaptureSuccess(image: ImageProxy) {
                     super.onCaptureSuccess(image)
-                    val matrix = Matrix().apply {
-                        postRotate(image.imageInfo.rotationDegrees.toFloat())
+                    image.use {
+                        val matrix = Matrix().apply {
+                            postRotate(it.imageInfo.rotationDegrees.toFloat())
+                        }
+                        val rotatedBitmap = Bitmap.createBitmap(
+                            it.toBitmap(),
+                            0,
+                            0,
+                            it.width,
+                            it.height,
+                            matrix,
+                            true
+                        )
+                        Log.d("Camera", "Photo taken: $rotatedBitmap")
+                        _bitmaps.value += rotatedBitmap
+                        // TODO: save bitmap
                     }
-                    val rotatedBitmap = Bitmap.createBitmap(
-                        image.toBitmap(),
-                        0,
-                        0,
-                        image.width,
-                        image.height,
-                        matrix,
-                        true
-                    )
-                    _bitmaps.value += rotatedBitmap
-                    // TODO: save bitmap
                 }
 
                 override fun onError(exception: ImageCaptureException) {
