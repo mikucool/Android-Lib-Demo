@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.hzz.legacyandroidviews.playground.ClipBoardDemoActivity
 import com.hzz.legacyandroidviews.playground.ScaleLayoutPlaygroundActivity
+import com.hzz.legacyandroidviews.playground.WatermarkRemovalDemoActivity
 
 class LegacyAndroidViewsEntryActivity : AppCompatActivity() {
 
@@ -27,5 +28,9 @@ class LegacyAndroidViewsEntryActivity : AppCompatActivity() {
         findViewById<Button>(R.id.button2).setOnClickListener {
             startActivity(Intent(this, ClipBoardDemoActivity::class.java))
         }
+        findViewById<Button>(R.id.button3).setOnClickListener {
+            startActivity(Intent(this, WatermarkRemovalDemoActivity::class.java))
+        }
+
     }
 }
