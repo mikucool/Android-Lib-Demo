@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.hzz.legacyandroidviews.playground.ClipBoardDemoActivity
 import com.hzz.legacyandroidviews.playground.ScaleLayoutPlaygroundActivity
 import com.hzz.legacyandroidviews.playground.WatermarkRemovalDemoActivity
+import com.hzz.legacyandroidviews.playground.WebViewDemoActivity
 
 class LegacyAndroidViewsEntryActivity : AppCompatActivity() {
 
@@ -30,6 +31,9 @@ class LegacyAndroidViewsEntryActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.button3).setOnClickListener {
             startActivity(Intent(this, WatermarkRemovalDemoActivity::class.java))
+        }
+        findViewById<Button>(R.id.button4).setOnClickListener {
+            startActivity(Intent(this, WebViewDemoActivity::class.java))
         }
 
     }
