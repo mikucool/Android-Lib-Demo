@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.hzz.legacyandroidviews.playground.ClipBoardDemoActivity
+import com.hzz.legacyandroidviews.playground.GalleryDemoActivity
 import com.hzz.legacyandroidviews.playground.ScaleLayoutPlaygroundActivity
 import com.hzz.legacyandroidviews.playground.WatermarkRemovalDemoActivity
 import com.hzz.legacyandroidviews.playground.WebViewDemoActivity
@@ -34,6 +35,9 @@ class LegacyAndroidViewsEntryActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.button4).setOnClickListener {
             startActivity(Intent(this, WebViewDemoActivity::class.java))
+        }
+        findViewById<Button>(R.id.button5).setOnClickListener {
+            startActivity(Intent(this, GalleryDemoActivity::class.java))
         }
 
     }
