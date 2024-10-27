@@ -42,6 +42,9 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    // https://mvnrepository.com/artifact/com.github.li-xiaojun/XPopup
+    implementation(libs.xpopup)
+    implementation(libs.material.v190) // Or latest version
     implementation(libs.androidx.exifinterface)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
