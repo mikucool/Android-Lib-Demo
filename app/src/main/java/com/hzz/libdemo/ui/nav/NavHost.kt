@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.hzz.libdemo.ui.camera_demos.Demo1Screen
+import com.hzz.libdemo.ui.file_management.FileManagementScreen
 import com.hzz.libdemo.ui.home.HomeScreen
 import com.hzz.libdemo.ui.live_wallpaper.LiveWallpaperScreen
 import com.hzz.libdemo.ui.material_demos.MaterialDemoScreen
@@ -36,6 +37,9 @@ fun AppNavGraph(
         }
         composable<MaterialDemo> {
             MaterialDemoScreen()
+        }
+        composable<FileManagement> {
+            FileManagementScreen()
         }
     }
 }

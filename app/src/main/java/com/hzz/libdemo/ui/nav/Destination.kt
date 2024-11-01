@@ -16,3 +16,6 @@ data class CameraDemo1(val route: String)
 
 @Serializable
 data class MaterialDemo(val route: String)
+
+@Serializable
+data class FileManagement(val route: String)
