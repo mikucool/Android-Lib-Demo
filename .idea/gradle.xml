@@ -11,7 +11,9 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/libs" />
+            <option value="$PROJECT_DIR$/libs/calendar_demos" />
             <option value="$PROJECT_DIR$/libs/camera_demos" />
+            <option value="$PROJECT_DIR$/libs/file_management" />
             <option value="$PROJECT_DIR$/libs/legacyandroidviews" />
             <option value="$PROJECT_DIR$/libs/live_wallpaper" />
             <option value="$PROJECT_DIR$/libs/materialdmoe" />

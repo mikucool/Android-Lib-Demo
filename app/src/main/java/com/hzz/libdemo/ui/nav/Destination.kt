@@ -19,3 +19,6 @@ data class MaterialDemo(val route: String)
 
 @Serializable
 data class FileManagement(val route: String)
+
+@Serializable
+data class CalendarDemo(val route: String)

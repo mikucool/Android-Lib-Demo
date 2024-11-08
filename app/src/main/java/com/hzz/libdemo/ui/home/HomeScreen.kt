@@ -11,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.hzz.libdemo.ui.nav.CalendarDemo
 import com.hzz.libdemo.ui.nav.CameraDemo1
 import com.hzz.libdemo.ui.nav.FileManagement
 import com.hzz.libdemo.ui.nav.LiveWallpaper
@@ -54,6 +55,11 @@ fun HomeScreen(
             navController.navigate(FileManagement("file_management"))
         }) {
             Text(text = "File Management")
+        }
+        Button(onClick = {
+            navController.navigate(CalendarDemo("calendar_demo"))
+        }) {
+            Text(text = "Calendar Demo")
         }
     }
 }
