@@ -110,4 +110,6 @@ data class BottomAppBar(val description: String = "Bottom App Bar")
 
 @Serializable
 data class CommonButtonSPlayground(val description: String = "Common Button Playground")
+@Serializable
+data class FABPlayground(val description: String = "Floating action button")
 

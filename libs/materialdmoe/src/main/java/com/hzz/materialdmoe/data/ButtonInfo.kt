@@ -13,8 +13,9 @@ data class ButtonInfo(
 ) {
 
 }
+
 sealed class ButtonType {
-    data object Unknown: ButtonType()
+    data object Unknown : ButtonType()
     abstract class Common : ButtonType() {
         data object Elevated : Common()
         data object Filled : Common()
@@ -22,5 +23,12 @@ sealed class ButtonType {
         data object Outlined : Common()
         data object Text : Common()
         data object Unknown : Common()
+    }
+
+    abstract class FABAbstract : ButtonType() {
+        data object FAB : FABAbstract()
+        data object SmallFAB : FABAbstract()
+        data object LargeFAB : FABAbstract()
+        data object ExtendedFAB : FABAbstract()
     }
 }

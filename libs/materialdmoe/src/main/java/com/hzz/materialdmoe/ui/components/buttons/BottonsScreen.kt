@@ -37,6 +37,7 @@ import com.hzz.materialdmoe.data.ButtonInfo
 import com.hzz.materialdmoe.data.ButtonType
 import com.hzz.materialdmoe.data.MaterialDemoLocalRepository
 import com.hzz.materialdmoe.ui.nav.CommonButtonSPlayground
+import com.hzz.materialdmoe.ui.nav.FABPlayground
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -109,6 +110,40 @@ fun ButtonsScreen(modifier: Modifier = Modifier, navController: NavController) {
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
                     Button(onClick = { navController.navigate(CommonButtonSPlayground()) }) {
                         Text(text = "CommonButtonsPlayground")
+                    }
+                }
+                Text(
+                    text = "FAB",
+                    style = MaterialTheme.typography.bodyLarge,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    text = "A Floating Action Button (FAB) is a high-emphasis button that lets the user perform a primary action in an application. It promotes a single, focused action that is the most common pathway a user might take and is typically found anchored to the bottom right of the screen."
+                )
+                LazyRow(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(300.dp)
+                        .padding(top = 16.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    items(
+                        items = MaterialDemoLocalRepository.getAllButtons()
+                            .filter { it.buttonType is ButtonType.FABAbstract },
+                        key = { it.id }
+                    ) {
+                        ButtonInfoCard(
+                            modifier = Modifier
+                                .padding(end = 12.dp, top = 12.dp, bottom = 12.dp)
+                                .fillMaxHeight()
+                                .aspectRatio(1f),
+                            buttonInfo = it
+                        )
+                    }
+                }
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+                    Button(onClick = { navController.navigate(FABPlayground()) }) {
+                        Text(text = "FABPlayground")
                     }
                 }
             }

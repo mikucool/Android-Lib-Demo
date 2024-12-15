@@ -1,9 +1,19 @@
 package com.hzz.materialdmoe.data
 
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.Button
 import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FilledTonalButton
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.Icon
+import androidx.compose.material3.LargeFloatingActionButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.ui.graphics.Color
@@ -148,27 +158,75 @@ object MaterialDemoLocalRepository {
             ),
             ButtonInfo(
                 id = 5,
-                name = "Extended FAB",
-                exampleActions = "Create Compose / New thread / New file",
-                rational = "The extended FAB’s wider format and text label give it more visual prominence than a  FAB. It’s often used on larger screens where a FAB would seem too small.",
-                emphasisLevel = "High"
-            ),
-            ButtonInfo(
-                id = 6,
                 name = "FAB",
                 exampleActions = "Create Compose",
                 rational = "The FAB remains the default component for a screen’s primary action. It comes in three sizes: small FAB, FAB, and large FAB.",
-                emphasisLevel = "High"
+                emphasisLevel = "High",
+                buttonType = ButtonType.FABAbstract.FAB,
+                content = {
+                    FloatingActionButton(onClick = {}) {
+                        Icon(Icons.Filled.Add, "Floating action button.")
+                    }
+                }
+            ),
+            ButtonInfo(
+                id = 6,
+                name = "SmallFAB",
+                exampleActions = "",
+                rational = "",
+                emphasisLevel = "High",
+                buttonType = ButtonType.FABAbstract.SmallFAB,
+                content = {
+                    SmallFloatingActionButton(
+                        onClick = {},
+                        containerColor = MaterialTheme.colorScheme.secondaryContainer,
+                        contentColor = MaterialTheme.colorScheme.secondary
+                    ) {
+                        Icon(Icons.Filled.Add, "Small floating action button.")
+                    }
+                }
             ),
             ButtonInfo(
                 id = 7,
+                name = "LargeFAB",
+                exampleActions = "",
+                rational = "",
+                emphasisLevel = "High",
+                buttonType = ButtonType.FABAbstract.LargeFAB,
+                content = {
+                    LargeFloatingActionButton(
+                        onClick = {},
+                        shape = CircleShape,
+                    ) {
+                        Icon(Icons.Filled.Add, "Large floating action button")
+                    }
+                }
+            ),
+            ButtonInfo(
+                id = 8,
+                name = "Extended FAB",
+                exampleActions = "Create Compose / New thread / New file",
+                rational = "The extended FAB’s wider format and text label give it more visual prominence than a  FAB. It’s often used on larger screens where a FAB would seem too small.",
+                emphasisLevel = "High",
+                buttonType = ButtonType.FABAbstract.ExtendedFAB,
+                content = {
+                    ExtendedFloatingActionButton(
+                        onClick = {},
+                        icon = { Icon(Icons.Filled.Edit, "Extended floating action button.") },
+                        text = { Text(text = "Extended FAB") },
+                    )
+                }
+            ),
+            ButtonInfo(
+                id = 9,
                 name = "Segmented button",
                 exampleActions = "Left align / Middle align / Right align",
                 rational = "Segmented buttons have more visual prominence than a single icon button.",
                 emphasisLevel = "Low"
             ),
+
             ButtonInfo(
-                id = 8,
+                id = 10,
                 name = "Icon button",
                 exampleActions = "Add to Favorites / Print",
                 rational = "The most compact and subtle type of button, icon buttons are used for optional supplementary actions such as “Bookmark” or “Star.”",
