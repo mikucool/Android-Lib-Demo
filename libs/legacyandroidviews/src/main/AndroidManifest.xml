@@ -30,6 +30,7 @@
         <activity android:name=".playground.WebViewDemoActivity" />
         <activity android:name=".playground.GalleryDemoActivity" />
         <activity android:name=".playground.DrawerDemoActivity" />
+        <activity android:name=".playground.PlinkoGameDemoActivity" />
     </application>
 
 </manifest>
