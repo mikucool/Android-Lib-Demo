@@ -11,12 +11,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.hzz.libdemo.ui.nav.CalendarDemo
-import com.hzz.libdemo.ui.nav.CameraDemo1
-import com.hzz.libdemo.ui.nav.FileManagement
-import com.hzz.libdemo.ui.nav.LiveWallpaper
-import com.hzz.libdemo.ui.nav.MaterialDemo
-import com.hzz.libdemo.ui.nav.NetServer
+import com.hzz.libdemo.ui.CalendarDemo
+import com.hzz.libdemo.ui.CameraDemo1
+import com.hzz.libdemo.ui.FileManagement
+import com.hzz.libdemo.ui.LiveWallpaper
+import com.hzz.libdemo.ui.MaterialDemo
+import com.hzz.libdemo.ui.NetServer
+import com.hzz.libdemo.ui.ShapeDemo
 
 @Composable
 fun HomeScreen(
@@ -60,6 +61,11 @@ fun HomeScreen(
             navController.navigate(CalendarDemo("calendar_demo"))
         }) {
             Text(text = "Calendar Demo")
+        }
+        Button(onClick = {
+            navController.navigate(ShapeDemo("shape_demo"))
+        }) {
+            Text(text = "Shape Demo")
         }
     }
 }

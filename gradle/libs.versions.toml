@@ -1,5 +1,6 @@
 [versions]
 agp = "8.4.2"
+graphicsShapes = "1.0.1"
 kotlin = "1.9.10"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -19,9 +20,11 @@ activity = "1.9.1"
 constraintlayout = "2.1.4"
 exifinterface = "1.3.7"
 xpopup = "2.9.19"
+graphicsShapesAndroid = "1.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-graphics-shapes = { module = "androidx.graphics:graphics-shapes", version.ref = "graphicsShapes" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -52,6 +55,7 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-exifinterface = { group = "androidx.exifinterface", name = "exifinterface", version.ref = "exifinterface" }
 material-v190 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 xpopup = { module = "com.github.li-xiaojun:XPopup", version.ref = "xpopup" }
+androidx-graphics-shapes-android = { group = "androidx.graphics", name = "graphics-shapes-android", version.ref = "graphicsShapesAndroid" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

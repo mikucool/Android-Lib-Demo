@@ -1,4 +1,4 @@
-package com.hzz.libdemo.ui.nav
+package com.hzz.libdemo.ui
 
 import kotlinx.serialization.Serializable
 
@@ -22,3 +22,6 @@ data class FileManagement(val route: String)
 
 @Serializable
 data class CalendarDemo(val route: String)
+
+@Serializable
+data class ShapeDemo(val route: String)

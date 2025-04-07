@@ -1,4 +1,4 @@
-package com.hzz.libdemo.ui.nav
+package com.hzz.libdemo.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -13,6 +13,7 @@ import com.hzz.libdemo.ui.home.HomeScreen
 import com.hzz.libdemo.ui.live_wallpaper.LiveWallpaperScreen
 import com.hzz.libdemo.ui.material_demos.MaterialDemoScreen
 import com.hzz.libdemo.ui.net_server.NetServerScreen
+import com.hzz.libdemo.ui.shape.ShapeScreen
 
 @Composable
 fun AppNavGraph(
@@ -44,6 +45,9 @@ fun AppNavGraph(
         }
         composable<CalendarDemo> {
             CalendarDemoScreen()
+        }
+        composable<ShapeDemo> {
+            ShapeScreen()
         }
     }
 }

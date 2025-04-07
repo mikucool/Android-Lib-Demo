@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.hzz.libdemo.ui.nav.AppNavGraph
+import com.hzz.libdemo.ui.AppNavGraph
 import com.hzz.libdemo.ui.theme.LibDemoTheme
 
 class MainActivity : ComponentActivity() {
