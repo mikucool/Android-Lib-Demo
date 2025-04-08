@@ -22,5 +22,10 @@ fun ShapeHomeScreen(modifier: Modifier = Modifier, navController: NavHostControl
         }) {
             Text(text = "Basic Shape")
         }
+        Button(onClick = {
+            navController.navigate(RoundedShape())
+        }) {
+            Text(text = "Rounded Shape")
+        }
     }
 }
