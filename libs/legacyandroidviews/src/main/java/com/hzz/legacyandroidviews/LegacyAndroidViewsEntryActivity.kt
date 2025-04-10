@@ -11,6 +11,7 @@ import com.hzz.legacyandroidviews.playground.ClipBoardDemoActivity
 import com.hzz.legacyandroidviews.playground.DrawerDemoActivity
 import com.hzz.legacyandroidviews.playground.GalleryDemoActivity
 import com.hzz.legacyandroidviews.playground.PlinkoGameDemoActivity
+import com.hzz.legacyandroidviews.playground.PositionActivity
 import com.hzz.legacyandroidviews.playground.ScaleLayoutPlaygroundActivity
 import com.hzz.legacyandroidviews.playground.WatermarkRemovalDemoActivity
 import com.hzz.legacyandroidviews.playground.WebViewDemoActivity
@@ -46,6 +47,9 @@ class LegacyAndroidViewsEntryActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.button7).setOnClickListener {
             startActivity(Intent(this, PlinkoGameDemoActivity::class.java))
+        }
+        findViewById<Button>(R.id.button8).setOnClickListener {
+            startActivity(Intent(this, PositionActivity::class.java))
         }
 
 
