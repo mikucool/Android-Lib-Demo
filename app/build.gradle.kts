@@ -75,6 +75,7 @@ dependencies {
     implementation(project(":libs:file_management"))
     implementation(project(":libs:calendar_demos"))
     implementation(project(":libs:compose_shape"))
+    implementation(project(":libs:costom_component"))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

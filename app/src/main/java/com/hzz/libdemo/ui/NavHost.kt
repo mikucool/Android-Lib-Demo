@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.costom_component.CustomComponentHost
 import com.hzz.libdemo.ui.calendar_demo.CalendarDemoScreen
 import com.hzz.libdemo.ui.camera_demos.Demo1Screen
 import com.hzz.libdemo.ui.file_management.FileManagementScreen
@@ -48,6 +49,9 @@ fun AppNavGraph(
         }
         composable<ShapeDemo> {
             ShapeScreen()
+        }
+        composable<CustomComponent> {
+            CustomComponentHost()
         }
     }
 }

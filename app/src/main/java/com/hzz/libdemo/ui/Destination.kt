@@ -25,3 +25,6 @@ data class CalendarDemo(val route: String)
 
 @Serializable
 data class ShapeDemo(val route: String)
+
+@Serializable
+data class CustomComponent(val route: String)

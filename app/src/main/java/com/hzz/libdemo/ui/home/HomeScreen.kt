@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.hzz.libdemo.ui.CalendarDemo
 import com.hzz.libdemo.ui.CameraDemo1
+import com.hzz.libdemo.ui.CustomComponent
 import com.hzz.libdemo.ui.FileManagement
 import com.hzz.libdemo.ui.LiveWallpaper
 import com.hzz.libdemo.ui.MaterialDemo
@@ -66,6 +67,12 @@ fun HomeScreen(
             navController.navigate(ShapeDemo("shape_demo"))
         }) {
             Text(text = "Shape Demo")
+        }
+
+        Button(onClick = {
+            navController.navigate(CustomComponent("custom_component"))
+        }) {
+            Text(text = "Custom Component")
         }
     }
 }
