@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.hzz.live_wallpaper"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 24

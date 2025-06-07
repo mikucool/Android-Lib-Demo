@@ -2,16 +2,16 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.jetbrains.kotlin.serialization)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
     namespace = "com.hzz.materialdmoe"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
 //        applicationId = "com.hzz.materialdmoe"
         minSdk = 24
-        targetSdk = 34
 //        versionCode = 1
 //        versionName = "1.0"
 
