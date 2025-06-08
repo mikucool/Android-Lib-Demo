@@ -8,3 +8,9 @@ data object CustomComponentHome
 
 @Serializable
 data object LuckyPass
+
+@Serializable
+data object CircleCarousel
+
+@Serializable
+data object SlotMachine

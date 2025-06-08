@@ -32,9 +32,9 @@ fun LuckyPassScreen(modifier: Modifier = Modifier) {
         if (isSpinning) {
             // 第一阶段：tween 加速动画
             rotation.animateTo(
-                targetValue = rotation.value + 3600f, // 第一阶段的结束角度
+                targetValue = rotation.value + 72000f, // 第一阶段的结束角度
                 animationSpec = tween(
-                    durationMillis = 2000, // 加速阶段持续时间
+                    durationMillis = 30000, // 加速阶段持续时间
                     easing = FastOutLinearInEasing // 加速曲线
                 )
             )

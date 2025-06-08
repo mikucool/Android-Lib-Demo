@@ -22,5 +22,15 @@ fun CustomComponentHome(modifier: Modifier = Modifier, navController: NavHostCon
         }) {
             Text(text = "Lucky Pass")
         }
+        Button(onClick = {
+            navController.navigate(CircleCarousel)
+        }) {
+            Text(text = "Circle Carousel")
+        }
+        Button(onClick = {
+            navController.navigate(SlotMachine)
+        }) {
+            Text(text = "Slot Machine")
+        }
     }
 }
