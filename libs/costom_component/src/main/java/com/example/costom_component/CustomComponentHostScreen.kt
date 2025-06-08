@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.costom_component.components.CircleCarouselScreen
+import com.example.costom_component.components.HorizontalSlotMachine
 import com.example.costom_component.components.LuckyPassScreen
 import com.example.costom_component.components.SlotMachineScreenFinal
 
@@ -29,6 +30,10 @@ fun CustomComponentHost(modifier: Modifier = Modifier, navController: NavHostCon
         }
         composable<SlotMachine> {
             SlotMachineScreenFinal()
+        }
+
+        composable<HorizontalSlotMachine> {
+            HorizontalSlotMachine()
         }
 
 

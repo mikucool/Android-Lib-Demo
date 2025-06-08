@@ -32,5 +32,10 @@ fun CustomComponentHome(modifier: Modifier = Modifier, navController: NavHostCon
         }) {
             Text(text = "Slot Machine")
         }
+        Button(onClick = {
+            navController.navigate(HorizontalSlotMachine)
+        }) {
+            Text(text = "Horizontal Slot Machine")
+        }
     }
 }

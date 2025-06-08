@@ -14,3 +14,5 @@ data object CircleCarousel
 
 @Serializable
 data object SlotMachine
+@Serializable
+data object HorizontalSlotMachine
