@@ -9,7 +9,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.hzz.legacyandroidviews.playground.ClipBoardDemoActivity
 import com.hzz.legacyandroidviews.playground.DrawerDemoActivity
+import com.hzz.legacyandroidviews.playground.FragmentStarterActivity.Companion.startFragment
 import com.hzz.legacyandroidviews.playground.GalleryDemoActivity
+import com.hzz.legacyandroidviews.playground.GradientTextFragment
 import com.hzz.legacyandroidviews.playground.PlinkoGameDemoActivity
 import com.hzz.legacyandroidviews.playground.PositionActivity
 import com.hzz.legacyandroidviews.playground.ScaleLayoutPlaygroundActivity
@@ -50,6 +52,10 @@ class LegacyAndroidViewsEntryActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.button8).setOnClickListener {
             startActivity(Intent(this, PositionActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.button9).setOnClickListener {
+            startFragment(GradientTextFragment::class.java)
         }
 
 

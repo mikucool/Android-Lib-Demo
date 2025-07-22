@@ -32,6 +32,7 @@
         <activity android:name=".playground.DrawerDemoActivity" />
         <activity android:name=".playground.PlinkoGameDemoActivity" />
         <activity android:name=".playground.PositionActivity" />
+        <activity android:name=".playground.FragmentStarterActivity"/>
     </application>
 
 </manifest>
